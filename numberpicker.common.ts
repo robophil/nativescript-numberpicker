@@ -8,4 +8,16 @@ export class NumberPicker extends view.View implements definition.NumberPicker {
 
     public minValue: number;
     public maxValue: number;
+
+    constructor() {
+        super();
+    }
+
+    get value(): number {
+        return this._getValue(NumberPicker.valueProperty);
+    }
+
+    set value(value: number) {
+        this._setValue(NumberPicker.valueProperty, value);
+    }
 }
