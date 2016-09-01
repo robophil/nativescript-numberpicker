@@ -31,6 +31,7 @@ export class NumberPicker extends common.NumberPicker {
                     if(instance) {
                         instance._onPropertyChangedFromNative(NumberPicker.valueProperty, newVal);
                     }
+                    console.log("value has been changed");
                 }
             }
         );
@@ -43,5 +44,10 @@ export class NumberPicker extends common.NumberPicker {
     public _createUI() {
         this._android = new android.widget.NumberPicker(this._context);
         this._android.setOnValueChangedListener(this._listener);
+        this._android.setMaxValue(100);
+        this._android.setMinValue(0);
+        this._android.setWrapSelectorWheel(true);
+        this._android.setValue(1);
+        console.log("view has been created");
     }
 }

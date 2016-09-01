@@ -1,5 +1,10 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
-  <StackLayout>
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:numberpicker="nativescript-numberpicker" loaded="loaded">
+  <StackLayout style.backgroundColor="green" id="st">
+    <Label text="Find numberpicker below" class="message" textWrap="true"/>
+    <numberpicker:NumberPicker />
+    <Label text="Find numberpicker below" class="message" textWrap="true"/>
+    <numberpicker:NumberPicker />
   </StackLayout>
 </Page>
