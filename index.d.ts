@@ -1,1 +1,1 @@
-/// <reference path="numberpicker.d.ts" />
+/// <reference path="./numberpicker.d.ts" />

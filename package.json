@@ -34,12 +34,12 @@
   "bugs": {
     "url": "https://github.com/robophil/nativescript-numberpicker/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/robophil/nativescript-numberpicker/blob/master/LICENSE"
-  },
+  "license": "https://github.com/robophil/nativescript-numberpicker/blob/master/LICENSE",
   "homepage": "https://github.com/robophil/nativescript-numberpicker",
   "readmeFilename": "README.md",
+  "dependencies": {
+    "tns-core-modules": "^2.2.0"
+  },
   "devDependencies": {
     "tns-core-modules": "^2.2.0",
     "tns-platform-declarations": "^2.2.0",

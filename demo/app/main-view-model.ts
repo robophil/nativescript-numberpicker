@@ -1,5 +1,5 @@
 import {Observable} from 'data/observable';
-import {YourPlugin} from 'nativescript-yourplugin';
+import numberpicker = require("nativescript-numberpicker");
 
 export class HelloWorldModel extends Observable {
   public message: string;

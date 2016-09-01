@@ -1,4 +1,5 @@
 demo/
+.vscode/
 *.png
 *.log
 *.map
