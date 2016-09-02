@@ -39,10 +39,7 @@ var NumberPicker = (function (_super) {
     NumberPicker.prototype._createUI = function () {
         this._android = new android.widget.NumberPicker(this._context);
         this._android.setOnValueChangedListener(this._listener);
-        this._android.setMaxValue(100);
-        this._android.setMinValue(0);
         this._android.setWrapSelectorWheel(true);
-        this._android.setValue(1);
         console.log("view has been created");
     };
     return NumberPicker;

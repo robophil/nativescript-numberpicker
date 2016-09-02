@@ -1,15 +1,8 @@
-import common = require("./numberpicker.common");
+import common = require("./numberpicker.common"); 
 import dependencyObservable = require("ui/core/dependency-observable");
 import proxy = require("ui/core/proxy");
 import utils = require("utils/utils");
 import * as types from "utils/types";
-
-function onValuePropertyChanged(data: dependencyObservable.PropertyChangeData) {
-    let picker = <NumberPicker>data.object;
-    picker.android.setValue(data.newValue);
-}
-
-(<proxy.PropertyMetadata>common.NumberPicker.valueProperty.metadata).onSetNativeValue = onValuePropertyChanged;
 
 global.moduleMerge(common, exports);
 
@@ -37,17 +30,26 @@ export class NumberPicker extends common.NumberPicker {
         );
     }
 
+    public _createUI() {
+        this._android = new android.widget.NumberPicker(this._context);
+        this._android.setOnValueChangedListener(this._listener);
+        this._android.setWrapSelectorWheel(true);
+        console.log("view has been created");
+    }
+
     get android(): android.widget.NumberPicker {
         return this._android;
     }
 
-    public _createUI() {
-        this._android = new android.widget.NumberPicker(this._context);
-        this._android.setOnValueChangedListener(this._listener);
-        this._android.setMaxValue(100);
-        this._android.setMinValue(0);
-        this._android.setWrapSelectorWheel(true);
-        this._android.setValue(1);
-        console.log("view has been created");
+    public _onValuePropertyChanged(data: dependencyObservable.PropertyChangeData){
+        this._android.setValue(data.newValue);
+    }
+
+    public _onMinValuePropertyChanged(data: dependencyObservable.PropertyChangeData){
+        this._android.setMinValue(data.newValue);
+    }
+
+    public _onMaxValuePropertyChanged(data: dependencyObservable.PropertyChangeData){
+        this._android.setMaxValue(data.newValue);
     }
 }

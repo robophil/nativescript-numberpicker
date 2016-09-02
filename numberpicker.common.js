@@ -22,7 +22,29 @@ var NumberPicker = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    NumberPicker.valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    Object.defineProperty(NumberPicker.prototype, "minValue", {
+        get: function () {
+            return this._getValue(NumberPicker.minValueProperty);
+        },
+        set: function (value) {
+            this._setValue(NumberPicker.minValueProperty, value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NumberPicker.prototype, "maxValue", {
+        get: function () {
+            return this._getValue(NumberPicker.maxValueProperty);
+        },
+        set: function (value) {
+            this._setValue(NumberPicker.maxValueProperty, value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    NumberPicker.valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(1, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    NumberPicker.minValueProperty = new dependencyObservable.Property("minValue", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    NumberPicker.maxValueProperty = new dependencyObservable.Property("maxValue", "NumberPicker", new proxy.PropertyMetadata(20, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     return NumberPicker;
 }(view.View));
 exports.NumberPicker = NumberPicker;
