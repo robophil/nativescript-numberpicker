@@ -3,7 +3,7 @@
   xmlns:numberpicker="nativescript-numberpicker" loaded="loaded">
   <StackLayout style.backgroundColor="green" id="st">
     <Label text="Find numberpicker below" class="message" textWrap="true"/>
-    <numberpicker:NumberPicker />
+    <numberpicker:NumberPicker background="white" />
     <Label text="Find numberpicker below" class="message" textWrap="true"/>
     <numberpicker:NumberPicker />
   </StackLayout>

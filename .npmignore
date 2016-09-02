@@ -2,6 +2,6 @@ demo/
 .vscode/
 *.png
 *.log
-*.map
+*.map.js
 *.ts
 !.d.ts

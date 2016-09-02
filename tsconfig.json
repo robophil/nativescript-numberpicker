@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+        "sourceMap": true,
         "removeComments": true,
         "experimentalDecorators": true,
         "noEmitHelpers": false,
@@ -13,7 +14,6 @@
       "node_modules/tns-platform-declarations/tns-core-modules/ios.d.ts",
       "node_modules/tns-platform-declarations/tns-core-modules/org.nativescript.widgets.d.ts",
       "numberpicker.d.ts",
-      "index.d.ts",
       "numberpicker.common.ts",
       "numberpicker.android.ts", 
       "numberpicker.ios.ts"
