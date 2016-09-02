@@ -11,6 +11,8 @@
   },
   "scripts": {
     "build": "tsc",
+    "lazyboy": "cd demo && tns prepare android && tns build android && cd ..",
+    "demo": "cd demo && tns plugin remove nativescript-numberpicker && tns plugin add .. && tns install",
     "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
     "demo.android": "npm run preparedemo && cd demo && tns run android",
     "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-numberpicker && tns plugin add .. && tns install",
