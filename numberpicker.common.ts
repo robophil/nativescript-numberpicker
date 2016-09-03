@@ -27,15 +27,11 @@ function onMaxValuePropertyChanged(data: dependencyObservable.PropertyChangeData
     picker._onMaxValuePropertyChanged(data);
 }
 
-//function to be called to apply changes to native side
-(<proxy.PropertyMetadata>NumberPicker.valueProperty.metadata).onSetNativeValue = onValuePropertyChanged;
-(<proxy.PropertyMetadata>NumberPicker.minValueProperty.metadata).onSetNativeValue = onMinValuePropertyChanged;
-(<proxy.PropertyMetadata>NumberPicker.maxValueProperty.metadata).onSetNativeValue = onMaxValuePropertyChanged;
 
 export class NumberPicker extends view.View implements definition.NumberPicker {
-    public static valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(1, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     public static minValueProperty = new dependencyObservable.Property("minValue", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     public static maxValueProperty = new dependencyObservable.Property("maxValue", "NumberPicker", new proxy.PropertyMetadata(20, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    public static valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(1, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
 
     constructor() {
         super();
@@ -77,3 +73,8 @@ export class NumberPicker extends view.View implements definition.NumberPicker {
         //would be overidden in their platform specific
     }
 }
+
+//function to be called to apply changes to native side
+(<proxy.PropertyMetadata>NumberPicker.minValueProperty.metadata).onSetNativeValue = onMinValuePropertyChanged;
+(<proxy.PropertyMetadata>NumberPicker.maxValueProperty.metadata).onSetNativeValue = onMaxValuePropertyChanged;
+(<proxy.PropertyMetadata>NumberPicker.valueProperty.metadata).onSetNativeValue = onValuePropertyChanged;

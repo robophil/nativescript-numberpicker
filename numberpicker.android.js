@@ -5,11 +5,6 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var common = require("./numberpicker.common");
-function onValuePropertyChanged(data) {
-    var picker = data.object;
-    picker.android.setValue(data.newValue);
-}
-common.NumberPicker.valueProperty.metadata.onSetNativeValue = onValuePropertyChanged;
 global.moduleMerge(common, exports);
 var NumberPicker = (function (_super) {
     __extends(NumberPicker, _super);
@@ -29,6 +24,12 @@ var NumberPicker = (function (_super) {
             }
         });
     }
+    NumberPicker.prototype._createUI = function () {
+        this._android = new android.widget.NumberPicker(this._context);
+        this._android.setOnValueChangedListener(this._listener);
+        this._android.setWrapSelectorWheel(true);
+        console.log("view has been created");
+    };
     Object.defineProperty(NumberPicker.prototype, "android", {
         get: function () {
             return this._android;
@@ -36,11 +37,14 @@ var NumberPicker = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    NumberPicker.prototype._createUI = function () {
-        this._android = new android.widget.NumberPicker(this._context);
-        this._android.setOnValueChangedListener(this._listener);
-        this._android.setWrapSelectorWheel(true);
-        console.log("view has been created");
+    NumberPicker.prototype._onValuePropertyChanged = function (data) {
+        this._android.setValue(data.newValue);
+    };
+    NumberPicker.prototype._onMinValuePropertyChanged = function (data) {
+        this._android.setMinValue(data.newValue);
+    };
+    NumberPicker.prototype._onMaxValuePropertyChanged = function (data) {
+        this._android.setMaxValue(data.newValue);
     };
     return NumberPicker;
 }(common.NumberPicker));

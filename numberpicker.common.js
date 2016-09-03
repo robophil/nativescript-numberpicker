@@ -7,6 +7,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 var dependencyObservable = require("ui/core/dependency-observable");
 var proxy = require("ui/core/proxy");
 var view = require("ui/core/view");
+function onValuePropertyChanged(data) {
+    var picker = data.object;
+    picker._onValuePropertyChanged(data);
+}
+function onMinValuePropertyChanged(data) {
+    var picker = data.object;
+    picker._onMinValuePropertyChanged(data);
+}
+function onMaxValuePropertyChanged(data) {
+    var picker = data.object;
+    picker._onMaxValuePropertyChanged(data);
+}
 var NumberPicker = (function (_super) {
     __extends(NumberPicker, _super);
     function NumberPicker() {
@@ -42,10 +54,19 @@ var NumberPicker = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    NumberPicker.prototype._onValuePropertyChanged = function (data) {
+    };
+    NumberPicker.prototype._onMinValuePropertyChanged = function (data) {
+    };
+    NumberPicker.prototype._onMaxValuePropertyChanged = function (data) {
+    };
     NumberPicker.valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(1, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     NumberPicker.minValueProperty = new dependencyObservable.Property("minValue", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     NumberPicker.maxValueProperty = new dependencyObservable.Property("maxValue", "NumberPicker", new proxy.PropertyMetadata(20, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     return NumberPicker;
 }(view.View));
 exports.NumberPicker = NumberPicker;
+NumberPicker.valueProperty.metadata.onSetNativeValue = onValuePropertyChanged;
+NumberPicker.minValueProperty.metadata.onSetNativeValue = onMinValuePropertyChanged;
+NumberPicker.maxValueProperty.metadata.onSetNativeValue = onMaxValuePropertyChanged;
 //# sourceMappingURL=numberpicker.common.js.map
