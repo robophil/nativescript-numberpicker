@@ -1,7 +1,7 @@
 {
   "name": "nativescript-numberpicker",
   "version": "1.0.0",
-  "description": "Your awesome NativeScript plugin.",
+  "description": "nativescript-numberpicker.",
   "main": "numberpicker.js",
   "nativescript": {
     "platforms": {
@@ -24,7 +24,9 @@
   },
   "keywords": [
     "NativeScript",
+    "Numberpicker",
     "JavaScript",
+    "typescript",
     "Android",
     "iOS"
   ],
@@ -35,7 +37,7 @@
   "bugs": {
     "url": "https://github.com/robophil/nativescript-numberpicker/issues"
   },
-  "license": "SEE LICENSE IN README.MD",
+  "license": "SEE LICENSE IN README.md",
   "homepage": "https://github.com/robophil/nativescript-numberpicker",
   "readmeFilename": "README.md",
   "devDependencies": {
