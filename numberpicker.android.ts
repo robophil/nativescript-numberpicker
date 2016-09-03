@@ -24,7 +24,6 @@ export class NumberPicker extends common.NumberPicker {
                     if(instance) {
                         instance._onPropertyChangedFromNative(NumberPicker.valueProperty, newVal);
                     }
-                    console.log("value has been changed");
                 }
             }
         );
@@ -34,7 +33,6 @@ export class NumberPicker extends common.NumberPicker {
         this._android = new android.widget.NumberPicker(this._context);
         this._android.setOnValueChangedListener(this._listener);
         this._android.setWrapSelectorWheel(true);
-        console.log("view has been created");
     }
 
     get android(): android.widget.NumberPicker {
