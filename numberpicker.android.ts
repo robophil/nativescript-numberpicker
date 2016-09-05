@@ -32,7 +32,7 @@ export class NumberPicker extends common.NumberPicker {
     public _createUI() {
         this._android = new android.widget.NumberPicker(this._context);
         this._android.setOnValueChangedListener(this._listener);
-        this._android.setDescendantFocusability(android.widget.NumberPicker.FOCUS_BLOCK_DESCENDANTS)
+        this._android.setDescendantFocusability(android.widget.NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         this._android.setWrapSelectorWheel(true);
     }
 
