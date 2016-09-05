@@ -20,15 +20,14 @@ var NumberPicker = (function (_super) {
                 if (instance) {
                     instance._onPropertyChangedFromNative(NumberPicker.valueProperty, newVal);
                 }
-                console.log("value has been changed");
             }
         });
     }
     NumberPicker.prototype._createUI = function () {
         this._android = new android.widget.NumberPicker(this._context);
         this._android.setOnValueChangedListener(this._listener);
+        this._android.setDescendantFocusability(android.widget.NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         this._android.setWrapSelectorWheel(true);
-        console.log("view has been created");
     };
     Object.defineProperty(NumberPicker.prototype, "android", {
         get: function () {
