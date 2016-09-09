@@ -2,10 +2,12 @@
 A nativescript plugin for number picker
 
 # install
-npm install nativescript-numberpicker
+tns plugin add nativescript-numberpicker
 
 add this to your references.d.ts for typescript support
-`/// <reference path="./node_modules/nativescript-numberpicker/numberpicker.d.ts" /> Needed for autocompletion and compilation.`
+```
+    /// <reference path="./node_modules/nativescript-numberpicker/numberpicker.d.ts" /> Needed for autocompletion and compilation.
+```
 
 # Usage in xml
 add this to your namespace `xmlns:numberpicker="nativescript-numberpicker"`
@@ -37,8 +39,9 @@ see the example below
     layout.addChild(np);
 ```
 # support
-Works on android and ios
-note: ios not tested yet, but it should work fine ;). not all of us use a mac.. lol
+Works on android and ios.
+
+**note**: ios not tested yet, but it should work fine ;) not all of us use a mac.. lol
 
 # issues and features request
 Just create an issue and i'll get back to you ASAP
