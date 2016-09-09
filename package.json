@@ -1,6 +1,6 @@
 {
   "name": "nativescript-numberpicker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "nativescript-numberpicker.",
   "main": "numberpicker.js",
   "nativescript": {
