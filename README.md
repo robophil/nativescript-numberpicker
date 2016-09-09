@@ -25,9 +25,17 @@ see the example below
     </StackLayout>
     </Page>
 
+
+    //how to retrive value set from view
+    import numberpicker = require("nativescript-numberpicker");
+    let np = <numberpicker.NumberPicker>page.getViewById("np");
+    let value = np.value; //retrive value from view
+
+
 ```
-# usage in code
+# Usage in code
 ```
+    //adding numberpicker from code
     import numberpicker = require("nativescript-numberpicker");
     let np = new numberpicker.NumberPicker();
     np.minValue = 0;
@@ -38,19 +46,19 @@ see the example below
     let layout = page.getViewById("Mycontainer");
     layout.addChild(np);
 ```
-# support
+# Support
 Works on android and ios.
 
 **note**: ios not tested yet, but it should work fine ;) not all of us use a mac.. lol
 
-# issues and features request
+# Issues and features request
 Just create an issue and i'll get back to you ASAP
 
 # Pull request
 yes, yes, yes, send them...keep them coming
 
-# coming soon
+# Coming soon
 styling support for ios and android
 
-# liscence
+# Liscence
 MIT
