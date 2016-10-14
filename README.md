@@ -2,8 +2,6 @@
 
 ![npm](https://img.shields.io/npm/v/nativescript-numberpicker.svg) ![license](https://img.shields.io/npm/l/nativescript-numberpicker.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/nativescript-numberpicker.svg)
 
-Generate your JS project README.md using an ES6 template
-
 ![nodei.co](https://nodei.co/npm/nativescript-numberpicker.png?downloads=true&downloadRank=true&stars=true)
 
 # nativescript-numberpicker
