@@ -61,8 +61,8 @@ var NumberPicker = (function (_super) {
     NumberPicker.prototype._onMaxValuePropertyChanged = function (data) {
     };
     NumberPicker.minValueProperty = new dependencyObservable.Property("minValue", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    NumberPicker.maxValueProperty = new dependencyObservable.Property("maxValue", "NumberPicker", new proxy.PropertyMetadata(20, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    NumberPicker.valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(1, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    NumberPicker.maxValueProperty = new dependencyObservable.Property("maxValue", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    NumberPicker.valueProperty = new dependencyObservable.Property("value", "NumberPicker", new proxy.PropertyMetadata(0, dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     return NumberPicker;
 }(view.View));
 exports.NumberPicker = NumberPicker;
