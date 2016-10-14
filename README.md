@@ -2,7 +2,9 @@
 A nativescript plugin for number picker
 
 # install
-tns plugin add nativescript-numberpicker
+```bash
+    tns plugin add nativescript-numberpicker
+```
 
 add this to your references.d.ts for typescript support
 ```
