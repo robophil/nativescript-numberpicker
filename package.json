@@ -40,6 +40,7 @@
   "license": "SEE LICENSE IN README.md",
   "homepage": "https://github.com/robophil/nativescript-numberpicker",
   "readmeFilename": "README.md",
+  "issues": "https://github.com/Robophil/nativescript-numberpicker/issues",
   "devDependencies": {
     "tns-core-modules": "^2.2.0",
     "tns-platform-declarations": "^2.2.0",
