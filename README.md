@@ -14,7 +14,7 @@ add this to your namespace `xmlns:numberpicker="nativescript-numberpicker"`
 then use like this `<numberpicker:NumberPicker value="3" minValue="2" maxValue="6" id="np"/>`
 
 see the example below
-```
+```xml
     <Page 
     xmlns="http://schemas.nativescript.org/tns.xsd"
     xmlns:numberpicker="nativescript-numberpicker" loaded="loaded">
@@ -24,17 +24,15 @@ see the example below
         <Label text="Find numberpicker below" class="message" textWrap="true"/>
     </StackLayout>
     </Page>
-
-
+```
+```typescript
     //how to retrive value set from view
     import numberpicker = require("nativescript-numberpicker");
     let np = <numberpicker.NumberPicker>page.getViewById("np");
     let value = np.value; //retrive value from view
-
-
 ```
 # Usage in code
-```
+```typescript
     //adding numberpicker from code
     import numberpicker = require("nativescript-numberpicker");
     let np = new numberpicker.NumberPicker();
