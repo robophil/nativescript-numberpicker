@@ -5,8 +5,8 @@
   "main": "numberpicker.js",
   "nativescript": {
     "platforms": {
-      "android": "2.0.0",
-      "ios": "2.0.0"
+      "android": "2.3.0",
+      "ios": "2.3.0"
     }
   },
   "scripts": {
@@ -43,6 +43,6 @@
   "devDependencies": {
     "tns-core-modules": "^2.2.0",
     "tns-platform-declarations": "^2.2.0",
-    "typescript": "^1.8.10"
+    "typescript": "^2.0.3"
   }
 }
